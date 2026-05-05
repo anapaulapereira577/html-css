@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<title>Vídeos</title>
+
+<style>
+
+body{
+font-family: Arial;
+text-align: center;
+}
+
+.pagina{
+display:none;
+}
+
+#inicio{
+display:block;
+}
+
+.grade{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+width:600px;
+margin:auto;
+}
+
+img{
+width:280px;
+cursor:pointer;
+}
+
+video{
+width:600px;
+}
+
+.seta{
+font-size:30px;
+cursor:pointer;
+}
+
+</style>
+
+<script>
+
+function abrir(pagina){
+document.querySelectorAll(".pagina").forEach(p => p.style.display="none");
+document.getElementById(pagina).style.display="block";
+}
+
+</script>
+
+</head>
+
+<body>
+
+<!-- PAGINA INICIAL -->
+
+<div id="inicio" class="pagina">
+
+<h1>Página inicial</h1>
+
+<button onclick="abrir('videos')">Assistir vídeos</button>
+
+</div>
+
+
+<!-- PAGINA COM 4 VIDEOS -->
+
+<div id="videos" class="pagina">
+
+<h1>Vídeos legais para assistir</h1>
+
+<div class="grade">
+
+<img src="thumb1.jpg" onclick="abrir('v1')">
+
+<img src="thumb2.jpg" onclick="abrir('v2')">
+
+<img src="thumb3.jpg" onclick="abrir('v3')">
+
+<img src="thumb4.jpg" onclick="abrir('v4')">
+
+</div>
+
+<br><br>
+
+<span class="seta" onclick="abrir('inicio')">⬅</span>
+
+</div>
+
+
+<!-- VIDEO 1 -->
+
+<div id="v1" class="pagina">
+
+<h1>Vídeo 1</h1>
+
+<video controls>
+<source src="midia/ meu-video.mp4" type="video/mp4">
+</video>
+
+<br><br>
+
+<span class="seta" onclick="abrir('videos')">⬅</span>
+
+</div>
+
+
+<!-- VIDEO 2 -->
+
+<div id="v2" class="pagina">
+
+<h1>Vídeo 2</h1>
+
+<video controls>
+<source src="midia/12902269_3840_2160_30fps.mp4" type="video/mp4">
+</video>
+
+<br><br>
+
+<span class="seta" onclick="abrir('videos')">⬅</span>
+
+</div>
+
+
+<!-- VIDEO 3 -->
+
+<div id="v3" class="pagina">
+
+<h1>Vídeo 3</h1>
+
+<video controls>
+<source src="midia/meu-video.mp4" type="video/mp4">
+</video>
+
+<br><br>
+
+<span class="seta" onclick="abrir('videos')">⬅</span>
+
+</div>
+
+
+<!-- VIDEO 4 -->
+
+<div id="v4" class="pagina">
+
+<h1>Vídeo 4</h1>
+
+<video controls>
+<source src="midia/meuv-ideo.mp4" type="video/mp4">
+</video>
+
+<br><br>
+
+<span class="seta" onclick="abrir('videos')">⬅</span>
+
+</div>
+
+</body>
