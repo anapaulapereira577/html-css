@@ -1,3 +1,68 @@
 @charset "UTF-8";
 
 /*Todas as demais midias*/
+
+@media print { /*IMPRESSAO*/
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    body{
+        background-image: url(../imagens/back-print.jpg); /*desnecessario*/
+
+    }
+    main {
+        width: 90vw;
+        border: 2px solid black;
+    }
+    main::after{
+        content: 'Essa impressao foi feita atraves do site www.cursoemvideo.com';
+        text-decoration: overline;
+    }
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+
+    img#phone{display: block;}
+img#tablet{display: block;}
+img#print{display:block;}
+img#pc{display: none;}
+img#tv{display: none;}
+
+}
+@media screen and (min-width: 768px) and (max-width: 1023px){ /*TABLET*/
+    body{
+        background-image: url(../imagens/back-tablet.jpg);  
+    }
+img#phone{display: block;}
+img#tablet{display: block;}
+img#print{display: none;}
+img#pc{display: none;}
+img#tv{display: none;}
+
+}
+
+@media screen and (min-width: 1024px)and (max-width: 1439px) { /*DESKTOP*/
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+img#phone{display: block;}
+img#tablet{display: none;}
+img#print{display: none;}
+img#pc{display: block;}
+img#tv{display: block;}
+}
+@media screen and (min-width:1440px) { /*GRANDES TELAS*/
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+img#phone{display: block;}
+img#tablet{display: none;}
+img#print{display: none;}
+img#pc{display: block;}
+img#tv{display: block}
+    
+}
+
+    
