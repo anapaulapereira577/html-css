@@ -10,15 +10,20 @@
 body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1em;
-    background-color: oklab(63.024% -0.00958 -0.02163 / 0.925);
+    background-color: #689678;
     height: 100vvh;
     width: 100vw;
 }
 
 header{
-    background-color:rgb(105, 133, 109);
-    color: white;
+    background-color: rgb(177, 119, 119);
+    color: rgb(236, 221, 221);
     padding: 10px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header > h1 {
@@ -27,10 +32,30 @@ header > h1 {
 
 header > nav {
     border: 1px dotted black;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+
+}
+
+header > nav > a {
+    background-color: #2e2b2a;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+header > nav > a:hover {
+    background-color: aliceblue;
+    color: black;
+    transition: background-color .5s;
 }
 
 main{
-    background-color: white;
+    background-color: #e2d9d6;
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
